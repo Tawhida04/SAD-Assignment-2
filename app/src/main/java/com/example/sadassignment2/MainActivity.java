@@ -27,9 +27,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Ensure this matches your XML filename
+        setContentView(R.layout.activity_main);
 
-        // Initialize views
         checkBoxShirt = findViewById(R.id.checkBoxShirt);
         checkBoxPants = findViewById(R.id.checkBoxPants);
         checkBoxShoes = findViewById(R.id.checkBoxShoes);
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
         switchNotification = findViewById(R.id.switchNotification);
         orderButton = findViewById(R.id.order_btn);
 
-        // Set up SeekBar listener to display selected quantity
         seekBarQuantity.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -49,16 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                // No action needed here
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                // No action needed here
+
             }
         });
 
-        // Set up the order button listener
         orderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,11 +63,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Method to handle order submission
     private void submitOrder() {
         StringBuilder orderSummary = new StringBuilder("Order Summary:\n");
 
-        // Check selected products
         if (checkBoxShirt.isChecked()) {
             orderSummary.append("- Shirt - 2000 TK\n");
         }
@@ -82,25 +76,20 @@ public class MainActivity extends AppCompatActivity {
             orderSummary.append("- Shoes - 1999 TK\n");
         }
 
-        // Get selected payment method
         int selectedPaymentId = radioGroupPayment.getCheckedRadioButtonId();
         RadioButton selectedPaymentButton = findViewById(selectedPaymentId);
         if (selectedPaymentButton != null) {
             orderSummary.append("Payment Method: ").append(selectedPaymentButton.getText()).append("\n");
         }
 
-        // Get experience rating
         float rating = ratingBarExperience.getRating();
         orderSummary.append("Experience Rating: ").append(rating).append("\n");
 
-        // Get quantity
         int quantity = seekBarQuantity.getProgress();
         orderSummary.append("Quantity: ").append(quantity).append("\n");
 
-        // Check promotional notifications
         orderSummary.append("Receive Promotions: ").append(switchNotification.isChecked() ? "Yes" : "No").append("\n");
 
-        // Display order summary in a Toast
         Toast.makeText(MainActivity.this, orderSummary.toString(), Toast.LENGTH_LONG).show();
     }
 }
