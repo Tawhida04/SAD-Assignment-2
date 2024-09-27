@@ -1,0 +1,7 @@
+<!-- res/values/colors.xml -->
+<resources>
+    <color name="fire_brick_200">#FF7F7F</color>
+    <color name="fire_brick_500">#FF0000</color>
+    <color name="black">#000000</color>
+    <!-- Add more colors as needed -->
+</resources>

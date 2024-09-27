@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/main"
+    android:layout_margin="30dp"
+    android:background="@drawable/img_5">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Shopping App"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:text="Select Products:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkBoxShirt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shirt - 2000 TK" />
+
+        <CheckBox
+            android:id="@+id/checkBoxPants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pants - 1500 TK" />
+
+        <CheckBox
+            android:id="@+id/checkBoxShoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shoes - 1999 TK" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Select Payment Method:"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPayment"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioCreditCard"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content"
+            android:text="Credit Card" />
+
+        <RadioButton
+            android:id="@+id/radioPayPal"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:text="bKash" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:text="Rate Your Experience:"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/ratingBarExperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/black"
+        android:progressTint="@color/fire_brick_500"
+        android:rating="0"
+        android:stepSize="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Select Quantity:" />
+
+    <SeekBar
+        android:id="@+id/seekBarQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:max="10" />
+
+    <TextView
+        android:id="@+id/quantityValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:id="@+id/switchNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receive Promotional Notifications" />
+
+    <Button
+        android:id="@+id/order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/black"
+        android:text="Submit" />
+</LinearLayout>

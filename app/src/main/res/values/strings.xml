@@ -1,0 +1,20 @@
+<resources>
+        <string name="app_name">Shopping App</string>
+        <string name="select_products">Select Products:</string>
+        <string name="product_shirt">Shirt - 2000 TK</string>
+        <string name="product_pants">Pants - 1500 TK</string>
+        <string name="product_shoes">Shoes - 1999 TK</string>
+        <string name="select_payment_method">Select Payment Method:</string>
+        <string name="payment_credit_card">Credit Card</string>
+        <string name="payment_bkash">bKash</string>
+        <string name="rate_experience">Rate Your Experience:</string>
+        <string name="select_quantity">Select Quantity:</string>
+        <string name="receive_notifications">Receive Promotional Notifications</string>
+        <string name="submit">Submit</string>
+        <string name="quantity_format">Quantity: %1$d</string>
+        <string name="order_summary">Order Summary:</string>
+        <string name="payment_method">Payment Method: %1$s</string>
+        <string name="experience_rating">Experience Rating: %1$.1f</string>
+        <string name="receive_promotions">Receive Promotions: %1$s</string>
+    </resources>
+
